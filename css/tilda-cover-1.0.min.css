@@ -50,7 +50,6 @@
   background-attachment: fixed;
 }
 .t-cover {
-  background-color: #000;
   overflow: hidden;
 }
 .t-cover.t-cover__transparent {
