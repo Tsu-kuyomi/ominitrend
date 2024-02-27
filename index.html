@@ -269,7 +269,8 @@
       }
     </style>
   </head>
-  <body class="t-body" style="margin: 0; background-image: url(/images/bg.jpg); height: 100vh; overflow: hidden;">
+  <body class="t-body" style="margin: 0; background-image: url(/images/bg.jpg); height: 100vh; overflow: hidden; cursor: none !important;">
+    <img class="cursor" src="/cursor.png" alt="">
     <!--allrecords-->
     <div
       id="allrecords"
@@ -1879,6 +1880,15 @@
           "https://static.tildacdn.com/js/tilda-stat-1.0.min.js"
         );
       }, 2000);
+
+      
+const cursor = document.querySelector(".cursor"); 
+
+document.addEventListener("mousemove", function (e) {
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
+});
+
     </script>
   </body>
 </html>
