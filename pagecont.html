@@ -269,7 +269,7 @@
       }
     </style>
   </head>
-  <body class="t-body" style="margin: 0; background-image: url(/images/bg.jpg); cursor: url('/cursor.png') !important;">
+  <body class="t-body" style="margin: 0; background-image: url(/images/bg.jpg); cursor: none !important;">
     <img class="cursor" src="/cursor.png" alt="">
     <!--allrecords-->
     <div
@@ -2533,7 +2533,6 @@
             });
           });
         </script>
-        <!-- /T396 -->
       </div>
     </div>
     <!--/allrecords--><!-- Stat -->
@@ -2567,11 +2566,11 @@
         );
       }, 2000);
 
-const cursor = document.querySelector(".cursor"); 
+      const cursor = document.querySelector(".cursor"); 
 
 document.addEventListener("mousemove", function (e) {
-    cursor.style.left = e.clientX + "px";
-    cursor.style.top = e.clientY + "px";
+    cursor.style.left = e.clientX + window.pageXOffset + "px";
+    cursor.style.top = e.clientY + window.pageYOffset + "px";
 });
 
     </script>
